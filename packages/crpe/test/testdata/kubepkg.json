@@ -1,0 +1,58 @@
+{
+  "apiVersion": "octohelm.tech/v1alpha1",
+  "kind": "KubePkg",
+  "metadata": {
+    "name": "demo",
+    "namespace": "default"
+  },
+  "spec": {
+    "version": "0.0.1",
+    "images": {
+      "docker.io/library/nginx:alpine": ""
+    },
+    "manifests": {
+      "web.default.deployment": {
+        "apiVersion": "apps/v1",
+        "kind": "Deployment",
+        "metadata": {
+          "name": "web",
+          "namespace": "default"
+        },
+        "spec": {
+          "replicas": 1,
+          "selector": {
+            "matchLabels": {
+              "app": "web"
+            }
+          },
+          "template": {
+            "metadata": {
+              "labels": {
+                "app": "web"
+              }
+            },
+            "spec": {
+              "containers": [
+                {
+                  "image": "docker.io/library/nginx:alpine",
+                  "imagePullPolicy": "IfNotPresent",
+                  "name": "web",
+                  "ports": [
+                    {
+                      "containerPort": 80,
+                      "name": "http"
+                    },
+                    {
+                      "containerPort": 443,
+                      "name": "https"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+name: crpe
+description: container registry in dart
+version: 0.0.2
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  async: ^2.8.2
+  json_annotation: ^4.4.0
+  freezed_annotation: ^1.1.0
+  uuid: ^3.0.5
+  version: ^2.0.0
+  filesize: ^2.0.1
+  rxdart: ^0.27.3
+  shelf_router: ^1.1.2
+  roundtripper: ^0.3.3
+  logr: ^0.1.2
+  contextdart: ^1.0.2
+  tar: ^0.5.5
+
+dev_dependencies:
+  test: ^1.20.1
+  build_runner: ^2.1.8
+  shelf_router_generator: ^1.0.2
+  json_serializable: ^6.1.5
+  freezed: ^1.1.1
+  analyzer: 3.3.1
+
