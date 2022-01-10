@@ -1,0 +1,27 @@
+name: Release CRPE App
+
+on:
+  push:
+    paths:
+      - packages/crpeapp/pubspec.yaml
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - run: make bootstrap
+      - run: make gen
+      - run: make build.android
+
+      - uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          folder: ./packages/crpeapp/build/.release
+          branch: release/${{ github.ref == 'refs/heads/main' && 'stable' || 'beta' }}
+          clean: true
