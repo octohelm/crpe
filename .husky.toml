@@ -1,0 +1,4 @@
+[hooks]
+post-version = ["sed -i -e 's/version: [^\\n]*/version: {{ .Version }}/g' pubspec.yaml"]
+pre-commit = ["make fmt"]
+commit-msg = ["husky lint-commit"]
