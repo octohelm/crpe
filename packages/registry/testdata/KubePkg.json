@@ -1,0 +1,10 @@
+{
+  "name": "demo",
+  "version": "0.0.1",
+  "images": {
+    "docker.io/library/nginx:alpine": "sha256:da9c94bec1da829ebd52431a84502ec471c8e548ffb2cedbf36260fd9bd1d4d3",
+    "docker.io/querycapistio/proxyv2:1.13.0-distroless": "sha256:5f69524bc2739d87030080adb7508cfe12cbc29ef0936c6d1300c69b31727dbb"
+  },
+  "manifests": [
+  ]
+}
