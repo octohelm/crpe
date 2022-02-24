@@ -1,7 +1,7 @@
 {
     "packageName": "tech.octohelm.crpe",
     "version": "0.0.1",
-    "buildNumber": "220223188",
-    "downloadURL": "/android/crpe-release-arm64-v8a-0.0.1-220223188.apk",
-    "description": "* todo"
+    "buildNumber": "1",
+    "downloadURL": "/android/crpe-release-arm64-v8a-0.0.1-1.apk",
+    "description": "TODO"
 }
